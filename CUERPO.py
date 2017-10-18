@@ -5,6 +5,7 @@
 #cifrdo por pass--> comparacion con txt---> si es erronea se enviara un codigo
 #-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 import os
+import shutil
 from os import listdir
 #comentario random wjnmsioudfheiouhjfeiudoshniuerdhjniulfjerdhoiulhjfnerilohn
 def Menu():
@@ -15,19 +16,20 @@ def Menu():
     print("5.Salir")
 
 def CrearCarpeta():
-    directorio=os.getcwd()
-    if(os.path.isdir(directorio)):
-        nombre=input('Introduce nombre de carpeta: ')
-        os.mkdir(nombre)
-        print("carpeta ",nombre," creada correctamente en",directorio)
+    nombre=input('Introduce el nombre: ')
+    ruta=r'C:\prueba'
+    carpeta=ruta+'\\'+nombre
+    if not os.path.exists(carpeta):
+        os.makedirs(carpeta)
 
 
 def BorrarCarpeta():
-    directorio=os.getcwd()
-    if(os.path.isdir(directorio)):
-        nombre=input('Introduce nombre de carpeta: ')
-        os.rmdir(nombre)
-        print("Carpeta ",nombre," borrada")
+
+    nombre=input('Nombre de la carpeta a borrar: ')
+    directorio=r'C:\prueba'
+    carpeta=directorio+'\\'+nombre
+    if(os.path.exists(carpeta)):
+        shutil.rmtree(carpeta)
 
 
 def AbrirCarpeta():
