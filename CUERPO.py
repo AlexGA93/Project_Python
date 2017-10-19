@@ -8,6 +8,7 @@ import os
 import shutil
 from os import listdir
 #comentario random wjnmsioudfheiouhjfeiudoshniuerdhjniulfjerdhoiulhjfnerilohn
+#COMENTARIO DE PRUEBA DE PYCHARM DESDE MI UBUNTU
 def Menu():
     print("1.Crear carpeta de comunidad. ")
     print("2.Borrar carpeta de comunidad.")
