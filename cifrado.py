@@ -7,16 +7,20 @@ algoritmo de cifrado en comparacion con una cadena de un txt llamado password.tx
     si no es correcto--> volvemos al princpio mostrando mensaje de error
 '''
 import os
+
+
 def Comparacion():
-    password = open('password.txt')
-    orden = input('Introduzca la contraseña: ')
-    passwordfile=password.read()
-    if passwordfile != orden:
+    password = open('password.txt','r').read().split('\n')
+    orden = input('Introduzca la contraseña: ').title()
+
+    if password[0] != orden:
         print('ERROR: pass erronea.')
     else:
+        print('CORRECTO')
+        import menu_global
         from menu_global import menu
         print('prueba')
-        #menu_global.menu()
+        menu_global.menu()
 
 
 Comparacion()
