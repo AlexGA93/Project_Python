@@ -9,6 +9,8 @@ miniproyecto
 
     1.2.AL TERMINAR CUALQUIER ACCION VOLVER A menu_global.py
 
+good luck
+
 
 
 #  Abrir, crear, editar, enviar documento txt(llamado colegio) con info del alumno
