@@ -17,6 +17,13 @@ def Menu():
     print("3.Consultar carpeta.")
     print("4.Salir")
 
+def opcion():
+    opcion=eval(input('Introduce la opcion: '))
+    if opcion<1 or opcion>4:
+        print("Error: revisa rango numerico de respuestas.")
+    else:
+        seleccion(opcion)
+
 def CrearCarpeta():
     nombre=input('Introduce el nombre: ').title()
     ruta=r'C:\prueba'
@@ -69,14 +76,8 @@ def seleccion(opcion):
         pass
 
 
-def opcion():
-    opcion=eval(input('Introduce la opcion: '))
-    if opcion<1 or opcion>4:
-        print("Error: revisa rango numerico de respuestas.")
-    else:
-        seleccion(opcion)
-
-
-print("Acceso a Manejo de Ficheros del Centro Educacional. Seleccione una de las opciones: ")
-Menu()
-opcion()
+def main():
+    print("Acceso a Manejo de Ficheros del Centro Educacional. Seleccione una de las opciones: ")
+    Menu()
+    opcion()
+main()

@@ -8,7 +8,7 @@ miniproyecto
      correos.py
 
     1.2.AL TERMINAR CUALQUIER ACCION VOLVER A menu_global.py
-
+HACER UN EXE AL FINAL
 good luck
 
 
