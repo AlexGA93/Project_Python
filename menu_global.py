@@ -8,7 +8,7 @@ def control(opcion):
         #llamamos a cuerpo.py
 
         print("")
-        from CUERPO import main
+        import CUERPO
         CUERPO.main()
     elif opcion==2:
         #llamamos a ficheros.py

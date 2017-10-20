@@ -28,12 +28,8 @@ def CrearCarpeta():
     nombre=input('Introduce el nombre: ').title()
     ruta=r'C:\prueba'
     carpeta=ruta+'\\'+nombre
-    if platform.system()=="Windows":
-        if not os.path.exists(carpeta):
-            os.makedirs(carpeta)
-    else:
-        print("Error. Accion no compatible con sistema. Proximamente en actualizaciones.")
-        pass
+    if not os.path.exists(carpeta):
+        os.makedirs(carpeta)
 
 
 
