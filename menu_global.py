@@ -27,4 +27,6 @@ def menu():
     print('3. Salir.')
     opcion=eval(input('Opcion: '))
     control(opcion)
-menu()
+
+if __name__=="__main__":
+    menu()

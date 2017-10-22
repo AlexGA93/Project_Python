@@ -1,7 +1,8 @@
-import sys
-from PyQt4 import QtGui
-
-app = QtGui.QApplication(sys.argv)
-window = QtGui.QWidget()
-window.setGeometry(0, 0, 500, 300)
-
+from tkinter import *
+from tkinter import ttk
+raiz=Tk()
+raiz.geometry('500x300')
+raiz.configure(bg='black')
+raiz.title('Ejemplo')
+ttk.Button(raiz,text='Salir',command=quit).pack(side=BOTTOM)
+raiz.mainloop()

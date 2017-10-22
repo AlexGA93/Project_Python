@@ -22,5 +22,5 @@ def Comparacion():
         print('prueba')
         menu_global.menu()
 
-
-Comparacion()
+if __name__=="__main__":
+    Comparacion()

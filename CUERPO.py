@@ -72,8 +72,8 @@ def seleccion(opcion):
         pass
 
 
-def main():
+if __name__=="__main__":
     print("Acceso a Manejo de Ficheros del Centro Educacional. Seleccione una de las opciones: ")
     Menu()
     opcion()
-main()
+    
