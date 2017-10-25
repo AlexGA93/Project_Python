@@ -10,11 +10,14 @@ from tkinter import ttk
 
 
 def Comparacion():
-    password = open('password_prueba.txt','r').read().split('\n')
-    Label1=Label(raiz,SystemExit="Contraseña: ")
-    orden = input('Introduzca la contraseña: ').title()
 
-    if password[0] != orden:
+    contraseña_documento = open('password_prueba.txt','r').read().split('\n')
+    cadena_contraseña_documento=''.join(contraseña_documento)
+
+    #print(password.get().title())
+    #print(cadena_contraseña_documento)
+
+    if cadena_contraseña_documento!= password.get().title():
         print('ERROR: pass erronea.')
     else:
         print('CORRECTO')
@@ -24,28 +27,24 @@ def Comparacion():
         menu_global.menu()
 
 
+# Montamos la ventana estetica
 raiz=Tk()
-raiz.geometry('500x300')
-raiz.iconbitmap('ico_python.ico')
-raiz.title('Control de Acceso')
-
-color='#ffffff'
-raiz.configure(bg=color)
-
+password=StringVar()
+raiz.geometry('500x300')#dimensiones de ventana
+raiz.iconbitmap('ico_python.ico')#llamamos a la foto de portada
+raiz.title('Control de Acceso')#titulo
+#color='#ffffff'
+#raiz.configure(bg=color)#definimos color de fondo de la ventana
 logo=PhotoImage(file="D:\GOOGLE DRIVE\Programacion\PYTHON\Project_Python\pruebas\source.gif")
 label1=Label(raiz,image=logo)
-label1.pack(fill=X)
-
-ttk.Button(raiz,text='Salir',command=quit).place(x=370,y=270)#.place(bordermode=OUTSIDE, height=25, width=50,)#.pack(side=RIGHT)
-ttk.Button(raiz,text='Aceptar',command=Comparacion()).place(x=70,y=270)#.pack(side=LEFT)#se puede llamnar a una funcion
-
-label2=Label(raiz,text="Contraseña")
-label2.pack(anchor=CENTER)
+label1.pack(fill=X)#cargo la foto de portada
 
 
-Entry1=Entry(raiz,bd=6)
-Entry1.pack(anchor=CENTER)
+etiqueta1=Label(raiz,text="Contraseña: ").place(x=170,y=170)
+caja=Entry(raiz,textvariable=password).place(x=170,y=200)
 
-
+ttk.Button(raiz,text='Aceptar',command=Comparacion).place(x=50,y=270)
+ttk.Button(raiz,text='Salir',command=quit).place(x=370,y=270)
+#Comparacion(raiz)
 raiz.mainloop()
 
