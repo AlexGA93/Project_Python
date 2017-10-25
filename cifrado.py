@@ -14,6 +14,7 @@ def Comparacion():
     contraseña_documento = open('password_prueba.txt','r').read().split('\n')
     cadena_contraseña_documento=''.join(contraseña_documento)
 
+
     #print(password.get().title())
     #print(cadena_contraseña_documento)
 
