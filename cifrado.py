@@ -35,7 +35,7 @@ raiz.iconbitmap('ico_python.ico')#llamamos a la foto de portada
 raiz.title('Control de Acceso')#titulo
 #color='#ffffff'
 #raiz.configure(bg=color)#definimos color de fondo de la ventana
-logo=PhotoImage(file="D:\GOOGLE DRIVE\Programacion\PYTHON\Project_Python\pruebas\source.gif")
+logo=PhotoImage(file="D:\GOOGLE DRIVE\Programacion\PYTHON\Project_Python\source.gif")
 label1=Label(raiz,image=logo)
 label1.pack(fill=X)#cargo la foto de portada
 
