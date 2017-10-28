@@ -6,48 +6,45 @@ from tkinter import *
 from tkinter import ttk
 from tkinter import messagebox
 
-def control(opcion):
-    if opcion==1:
-        #llamamos a cuerpo.py
+def control():
+    opcion=eleccion.get()
+    print(opcion)
 
-        print("")
-        import CUERPO
-        CUERPO.main()
-    elif opcion==2:
-        #llamamos a ficheros.py
+    if opcion=="1":
+        print("1111111111111111111111111111111111111111")
+        mensaje_saliente = messagebox.showinfo("1111111111111111111111111111111111111111")
+        
+    elif opcion=="2":
+        print("2222222222222222222222222222222222222222222")
+        mensaje_saliente = messagebox.showinfo("2222222222222222222222222222222222222222222")
 
-        print("")
-        # from ficheros import main
-        #ficheros.main()
-    elif opcion==3:
-        print("Saliendo... ")
-        pass
-def menu():
-    print('Bienvenido al Asistente de la Base de Datos Educacional.')
-    print('Escoja una de las opciones disponibles:')
-    print('1.Seccion Ficheros por Comunidad Autonoma.')
-    print('2. Seccion Centros educacionales. ')
-    print('3. Salir.')
-    opcion=eval(input('Opcion: '))
-    control(opcion)
+
+    elif opcion=="3":
+        print("3333333333333333333333333333333333333333333")
+        mensaje_saliente = messagebox.showinfo("3333333333333333333333333333333333333333333")
+
+#-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 raiz=Tk()
-password=StringVar()
-raiz.geometry('1000x1000')#dimensiones de ventana
+raiz.geometry('500x500')#dimensiones de ventana
 raiz.iconbitmap('ico_python.ico')#llamamos a la foto de portada
 raiz.title('Menu del Servicio Educacional')#titulo
-
-
 logo=PhotoImage(file="D:\GOOGLE DRIVE\Programacion\PYTHON\Project_Python\source.gif")
-label1=Label(raiz,image=logo)
-label1.pack(fill=X)#cargo la foto de portada
+label1=Label(raiz,image=logo).pack(fill=X)
+
+etiqueta_intro = Label(raiz, text="Bienvenido al Asistente de la Base de Datos Educacional.").place(x=100, y=170)
+etiqueta_intro2 = Label(raiz, text="Escoja una de las opciones disponibles: ").place(x=135, y=190)
+etiqueta_intro = Label(raiz, text="------------------------------------------------------------------").place(x=80, y=210)
+etiqueta_opcion1 = Label(raiz, text="1.Seccion Ficheros por Comunidad Autonoma.").place(x=100, y=240)
+etiqueta_opcion2= Label(raiz, text="2. Seccion Centros educacionales. ").place(x=100, y=270)
+etiqueta_opcion3 = Label(raiz, text="3. Salir.").place(x=100, y=300)
 
 
-#etiqueta1=Label(raiz,text="Contraseña: ").place(x=170,y=170)
-#caja=Entry(raiz,textvariable=password).place(x=170,y=200)
+eleccion=StringVar()
+etiqueta_eleccion = Label(raiz, text="Eleccion: ").place(x=100, y=360)
+caja_eleccion = Entry(raiz, textvariable=eleccion).place(x=150, y=360)
+ttk.Button(raiz, text='Aceptar', command=control).place(x=90, y=470)
 
-#ttk.Button(raiz,text='Aceptar',command=Comparacion).place(x=50,y=270)
-
-ttk.Button(raiz,text='Salir',command=quit).place(x=370,y=270)
-#Comparacion(raiz)
+#ttk.Button(raiz, text='Aceptar', command=control(opcion)).place(x=90, y=470)
+ttk.Button(raiz,text='Salir',command=quit).place(x=370,y=470)
 raiz.mainloop()

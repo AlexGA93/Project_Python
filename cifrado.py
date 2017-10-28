@@ -45,6 +45,6 @@ caja=Entry(raiz,textvariable=password).place(x=170,y=200)
 
 ttk.Button(raiz,text='Aceptar',command=Comparacion).place(x=50,y=270)
 ttk.Button(raiz,text='Salir',command=quit).place(x=370,y=270)
-#Comparacion(raiz)
+
 raiz.mainloop()
 
