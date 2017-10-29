@@ -11,8 +11,8 @@ def control(opcion):
         #llamamos a cuerpo.py
 
         print("")
-        import CUERPO
-        CUERPO.main()
+        import ficheros
+        ficheros.main()
     elif opcion==2:
         #llamamos a ficheros.py
 

@@ -1,21 +1,17 @@
 # Project_Python
-miniproyecto
 
-1.Interfaz grafica que comience con:
-    1.1 cifrado.py--->si accede ejecutara menu_global.py---> acceso a:
-     cuerpo.py(carpetas)
-     ficheros.py(txt)
-     correos.py
-
-    1.2.AL TERMINAR CUALQUIER ACCION VOLVER A menu_global.py
-HACER UN EXE AL FINAL
-good luck
-
-
-
-#  Abrir, crear, editar, enviar documento txt(llamado colegio) con info del alumno
-      nombre,apellidos,edaed,direccion,email,telefonos
-#  guardamos los txt en carpetas llamadas por la comunidad( donde se guardaran varios txt de colegios)---> HACER MENU AL INICIAR PARA ACCEDER A LAS CARPETAS
-#  interfaz grafica
-#  cifrdo por pass--> comparacion con txt---> si es erronea se enviara un codigo
+#Funcion Principal
+Programa cifrado con contraseña encargado de gestionar tanto documentos txt, como ficheros desde una interfaz grafica
+#cifrado.py
+Inicia una ventana desde la cual introducimos la contraseña e internamente comparamos los datos introducimos con los datos del archivo password_prueba.txt
+De der correcto: Muestra una ventana de mensaje correcto e inicia el menu global(menu_global.py)
+De ser incorrecto: Muestra una ventana de mensaje incorrecto y salimos del sistema
+#menu_global.py
+Inicia la interfaz grafica donde introducimos la opcion que deseamos de acuerdo a lo que queremos:
+    gestionar Ficheros o gestionar Archivos .txt
+#ficheros.py
+Encargado de gestionar la creacion, eliminacion, muestra y apertura de ficheros
+#archivos.py
+Encargado de gestionar la creacion, eliminacion, muestra y apertura de archivos .txt
+(En progreso)
 #-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

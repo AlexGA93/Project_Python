@@ -1,27 +1,26 @@
 '''
 algoritmo llamado desde el programa de cifrado de seguridad
 '''
-import os
+
 from tkinter import *
 from tkinter import ttk
 from tkinter import messagebox
 
 def control():
     opcion=eleccion.get()
-    print(opcion)
 
     if opcion=="1":
-        print("1111111111111111111111111111111111111111")
-        mensaje_saliente = messagebox.showinfo("1111111111111111111111111111111111111111")
-        
-    elif opcion=="2":
-        print("2222222222222222222222222222222222222222222")
-        mensaje_saliente = messagebox.showinfo("2222222222222222222222222222222222222222222")
+        import ficheros
+        if __name__ == '__main__':
+            ficheros
 
+    elif opcion=="2":
+        #invocar a centros.py
+        print("holis")
 
     elif opcion=="3":
-        print("3333333333333333333333333333333333333333333")
-        mensaje_saliente = messagebox.showinfo("3333333333333333333333333333333333333333333")
+        mensaje_saliente = messagebox.showinfo("Salir", "Saliendo del sistema. Gracias!")
+        sys.exit(0)
 
 #-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
